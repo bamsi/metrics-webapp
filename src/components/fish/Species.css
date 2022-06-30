@@ -41,7 +41,7 @@
 .description {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: flex-end;
 }
 
@@ -61,4 +61,15 @@
     top: 1rem;
     right: 1rem;
     z-index: 10;
+}
+
+@media only screen and (min-width: 760px){
+    .content-section {
+        margin:0 10%;
+    }
+
+    .list-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
