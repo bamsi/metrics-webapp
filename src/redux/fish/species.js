@@ -22,7 +22,7 @@ const getData = () => async (dispatch) => {
     const response = await fetch(url);
     const data = await response.json();
     let payload = data.map((item, index) => {
-      const img = item['Image Gallery'] ? item['Image Gallery']['0'] : null;
+      const img = item['Image Gallery'] ? item['Image Gallery']['1'] : null;
       if (img !== null) {
         return {
           Cholesterol: item.Cholesterol,
