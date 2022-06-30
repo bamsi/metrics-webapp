@@ -1,6 +1,6 @@
 const GET_SPECIES_DETAIL = 'fish/species/GET_SPECIES_DETAIL';
 
-const url = 'https://www.fishwatch.gov/api/species';
+const url = '/api/species';
 const initialState = [];
 
 const getSpeciesDetail = (data) => ({
