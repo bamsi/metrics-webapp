@@ -2,7 +2,7 @@
 
 "Fish Species" is a website  about individual species on the FishWatch.gov site. The website allow users to view various species registered at FishWatch. Moreover, the website provides the details of mineral composition as per the current details collected from various sources. The website has been designed using mobile first approach, which means it is responsive to different screen sizes.
 
-<img src="./src/assets.screenshot.png">
+<img src="./src/assets/screenshot.png" />
 
 ## Built With
 
