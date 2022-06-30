@@ -1,7 +1,7 @@
 const GET_SPECIES_DETAIL = 'fish/species/GET_SPECIES_DETAIL';
 
 const url = '/api/species';
-const initialState = {};
+const initialState = [];
 
 const getSpeciesDetail = (data) => ({
   type: GET_SPECIES_DETAIL,
