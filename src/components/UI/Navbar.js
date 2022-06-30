@@ -9,7 +9,7 @@ const Navbar = (props) => {
   const { path } = props;
   return (
     <nav className="nav-bar">
-      <NavLink to={path}>
+      <NavLink to={path} className={({ isActive }) => (isActive ? 'hide' : '')}>
         <FontAwesomeIcon icon={faAngleLeft} className="font" />
         <span className="desktop">Back</span>
       </NavLink>

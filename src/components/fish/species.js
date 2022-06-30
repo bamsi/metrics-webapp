@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { getData } from '../../redux/fish/species';
 
-import './Species.css';
+import './species.css';
 
 const Species = () => {
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ const Species = () => {
             <div className="description">
               <span className="title">{item.species}</span>
               <span className="sub-title">
-                Cholesterol
+                Cholesterol &nbsp;
                 {item.Cholesterol}
               </span>
             </div>
