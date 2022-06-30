@@ -38,7 +38,7 @@ const getData = () => async (dispatch) => {
     );
     return dispatch(getSpecies(payload));
   } catch (err) {
-    return alert(err.message);
+    return alert(err.message); // eslint-disable-line
   }
 };
 

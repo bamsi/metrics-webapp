@@ -9,11 +9,11 @@
 
 .font {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #fff;
 }
 
-@media only screen and (min-width: 600px){
- .desktop {
-  display: inline-block;
- }
+@media only screen and (min-width: 600px) {
+  .desktop {
+    display: inline-block;
+  }
 }

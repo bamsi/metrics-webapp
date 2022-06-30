@@ -1,19 +1,19 @@
 .top-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 1rem;
-    background-color: rgb(49, 52, 115, 90%);
-}
-.title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #fffff7b0;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  background-color: rgb(49, 52, 115, 90%);
 }
 
-@media only screen and (min-width: 760px){
-    .top-header {
-        padding: 2rem 11%;
-    }
-  
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fffff7b0;
+}
+
+@media only screen and (min-width: 760px) {
+  .top-header {
+    padding: 2rem 11%;
+  }
 }
