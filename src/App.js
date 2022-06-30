@@ -8,7 +8,7 @@ import Header from './components/UI/Header';
 function App() {
   const title = 'Fish Species';
   return (
-    <div>
+    <div className="main-container">
       <Header title={title} />
       <Routes>
         <Route path="/" element={<Species />} />

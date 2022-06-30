@@ -1,0 +1,12 @@
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.background img {
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    max-height: 50%;
+    opacity: 70%;
+}

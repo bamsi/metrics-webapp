@@ -1,0 +1,12 @@
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    background-color: rgb(49, 52, 115, 90%);
+    color: #fff;
+}
+.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
