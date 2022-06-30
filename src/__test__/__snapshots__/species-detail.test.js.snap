@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing rendering of the mission page  1`] = `
+<div>
+  shallow(
+  <div
+    class="loading"
+  >
+     Loading....
+  </div>
+  )
+</div>
+`;
