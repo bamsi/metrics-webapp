@@ -6,7 +6,9 @@
 
 ## Built With
 
-React
+- React
+- Redux
+- CSS
 
 ## Live Demo
 [Link](https://fish-species-webapp.herokuapp.com/)
