@@ -14,7 +14,15 @@ const Species = () => {
   return (
     <section className="list-container">
       {species.map((item) => (
-        <div key={item.id}>{item.species}</div>
+        <div key={item.id}>
+          <span className="background">
+            <img src={item.image.src} alt={item.image.alt} />
+          </span>
+          <div className="description">
+            <span>{item.species}</span>
+            <span>{item.Cholesterol}</span>
+          </div>
+        </div>
       ))}
     </section>
   );

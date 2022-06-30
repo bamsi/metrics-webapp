@@ -21,15 +21,24 @@ const getData = () => async (dispatch) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const payload = data.map((item, index) => ({
-      Cholesterol: item.Cholesterol,
-      image: item['Image Gallery'],
-      species: item['Species Name'],
-      id: index + 1,
-    }));
+    let payload = data.map((item, index) => {
+      const img = item['Image Gallery'] ? item['Image Gallery']['0'] : null;
+      if (img !== null) {
+        return {
+          Cholesterol: item.Cholesterol,
+          image: img,
+          species: item['Species Name'],
+          id: index + 1,
+        };
+      }
+      return null;
+    });
+    payload = payload.filter(
+      (item, index) => item !== null && item.image !== undefined && index < 20,
+    );
     return dispatch(getSpecies(payload));
   } catch (err) {
-    return alert(console.message);
+    return alert(err.message);
   }
 };
 
