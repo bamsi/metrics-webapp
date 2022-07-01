@@ -1,4 +1,4 @@
-import Species, {searchSpecies} from '../fish/species';
+import Species, { searchSpecies } from '../fish/species';
 
 describe('Testing Species store state', () => {
   test('should return the initial state', () => {
@@ -46,12 +46,6 @@ describe('Testing Species store state', () => {
         species: 'Sailfish',
       },
     ];
-    const GET_SPECIES = 'fish/species/SEARCH_SPECIES';
-    const getSpecies = (keyword) => ({
-      type: GET_SPECIES,
-      keyword,
-    });
-
     expect(Species(species, searchSpecies('white'))).toEqual([
       {
         id: 1,
