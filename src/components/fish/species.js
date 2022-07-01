@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { getData } from '../../redux/fish/species';
+import { getData, searchSpecies } from '../../redux/fish/species';
 
 import './species.css';
 
 const Species = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [keyword, setKeyword] = useState('');
   const species = useSelector((state) => state.species);
   useEffect(() => {
     if (!species.length) {
@@ -21,11 +22,39 @@ const Species = () => {
     navigate('/species', { state: item });
   };
 
+  const filterSpecies = (event) => {
+    event.preventDefault();
+    if (keyword !== '') dispatch(searchSpecies(keyword));
+    else dispatch(getData());
+  };
+
+  const header = (
+    <header className="header">
+      <h2 className="list-title">Fish Species</h2>
+      <form onSubmit={filterSpecies}>
+        <input
+          type="text"
+          placeholder="Search by species"
+          className="search-box"
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+        />
+        <input type="submit" value="Search" className="search-button" />
+      </form>
+    </header>
+  );
+  if (!species.length) {
+    return (
+      <div className="content-section">
+        {header}
+        <div className="not-found"> No data found!</div>
+      </div>
+    );
+  }
+
   return (
     <section className="content-section">
-      <header>
-        <h2 className="list-title">Fish Species</h2>
-      </header>
+      {header}
       <div className="list-container">
         {species.map((item) => (
           <div

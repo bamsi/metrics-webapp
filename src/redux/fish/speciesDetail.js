@@ -40,7 +40,7 @@ const getDetails = (name) => async (dispatch) => {
     }));
     return dispatch(getSpeciesDetail(payload));
   } catch (err) {
-    return alert(err.message); // eslint-disable-line
+    return alert(err.message);
   }
 };
 

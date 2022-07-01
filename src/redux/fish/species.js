@@ -1,4 +1,5 @@
 const GET_SPECIES = 'fish/species/GET_SPECIES';
+const SEARCH_SPECIES = 'fish/species/SEARCH_SPECIES';
 
 const url = '/api/species';
 const initialState = [];
@@ -8,10 +9,20 @@ const getSpecies = (data) => ({
   data,
 });
 
+const searchSpecies = (keyword) => ({
+  type: SEARCH_SPECIES,
+  keyword,
+});
+
 const species = (state = initialState, action) => {
   switch (action.type) {
     case GET_SPECIES:
       return action.data;
+    case SEARCH_SPECIES: {
+      const key = action.keyword;
+      const result = state.filter((item) => item.species.toLowerCase().includes(key.toLowerCase()));
+      return result;
+    }
     default:
       return state;
   }
@@ -38,10 +49,10 @@ const getData = () => async (dispatch) => {
     );
     return dispatch(getSpecies(payload));
   } catch (err) {
-    return alert(err.message); // eslint-disable-line
+    return alert(err.message);
   }
 };
 
 export default species;
 
-export { getData };
+export { getData, searchSpecies };
