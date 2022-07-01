@@ -11,7 +11,11 @@
 - CSS
 
 ## Live Demo
-[Link](https://fish-species-webapp.herokuapp.com/)
+[Demo Link](https://fish-species-webapp.herokuapp.com/)
+
+
+## Video Link
+[Video Link](https://www.loom.com/share/703507328c484cc486842fdea052cf75)
 
 ## Getting Started
 
@@ -55,7 +59,7 @@ You can deploy the website to any web server of your choice
 
 - GitHub:
   [@bamsi](https://github.com/bamsi)
-- Twitter: [@bamsi](https://twitter.com/haji-bamsi-17327728/)
+- Twitter: [@bamsi](https://twitter.com/hibamsi)
 - LinkedIn: [bamsi](https://linkedin.com/in/bamsi)
 
 ## Acknowledgments
