@@ -12,8 +12,17 @@
   color: #fff;
 }
 
+.error-message {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  background-color: #fff;
+  color: #ff0000;
+}
+
 @media only screen and (min-width: 600px) {
   .desktop {
     display: inline-block;
   }
 }
+

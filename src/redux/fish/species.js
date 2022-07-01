@@ -1,3 +1,5 @@
+import HandleError from '../../components/UI/HandleError';
+
 const GET_SPECIES = 'fish/species/GET_SPECIES';
 const SEARCH_SPECIES = 'fish/species/SEARCH_SPECIES';
 
@@ -48,8 +50,8 @@ const getData = () => async (dispatch) => {
       (item, index) => item !== null && item.image !== undefined && index < 20,
     );
     return dispatch(getSpecies(payload));
-  } catch (err) {
-    return alert(err.message);
+  } catch (error) {
+    return <HandleError error={error} />;
   }
 };
 

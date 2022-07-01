@@ -1,3 +1,5 @@
+import HandleError from '../../components/UI/HandleError';
+
 const GET_SPECIES_DETAIL = 'fish/species/GET_SPECIES_DETAIL';
 
 const url = '/api/species';
@@ -39,8 +41,8 @@ const getDetails = (name) => async (dispatch) => {
       },
     }));
     return dispatch(getSpeciesDetail(payload));
-  } catch (err) {
-    return alert(err.message);
+  } catch (error) {
+    return <HandleError error={error} />;
   }
 };
 
