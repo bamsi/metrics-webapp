@@ -1,0 +1,12 @@
+.nav-bar a {
+  text-decoration: none;
+}
+
+.nav-bar span {
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.hide {
+  display: none;
+}

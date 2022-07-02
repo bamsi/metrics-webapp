@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing rendering of the mission page  1`] = `
+<div>
+  <div
+    class="content-section"
+  >
+    <header
+      class="header"
+    >
+      <h2
+        class="list-title"
+      >
+        Fish Species
+      </h2>
+      <form>
+        <input
+          class="search-box"
+          placeholder="Search by species"
+          type="text"
+          value=""
+        />
+        <input
+          class="search-button"
+          type="submit"
+          value="Search"
+        />
+      </form>
+    </header>
+    <div
+      class="not-found"
+    >
+       No data found!
+    </div>
+  </div>
+</div>
+`;
